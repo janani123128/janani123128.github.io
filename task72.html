@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Branding Guidelines</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    padding:40px;
+}
+
+/* Container */
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.1);
+    overflow:hidden;
+}
+
+/* Header */
+.header{
+    background:linear-gradient(135deg,#2563eb,#9333ea);
+    color:#fff;
+    padding:40px;
+    text-align:center;
+}
+
+.header h1{
+    font-size:2rem;
+}
+
+.header p{
+    font-size:14px;
+    opacity:0.9;
+}
+
+/* Section */
+.section{
+    padding:25px;
+    border-bottom:1px solid #eee;
+}
+
+.section h2{
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.section p{
+    color:#6b7280;
+    font-size:14px;
+    line-height:1.5;
+}
+
+/* Logo box */
+.logo-box{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+.logo{
+    width:80px;
+    height:80px;
+    border-radius:12px;
+    background:#2563eb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.logo.dark{
+    background:#111827;
+}
+
+.logo.light{
+    background:#e5e7eb;
+    color:#111;
+}
+
+/* Color palette */
+.colors{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.color{
+    width:60px;
+    height:60px;
+    border-radius:8px;
+}
+
+.primary{ background:#2563eb; }
+.secondary{ background:#9333ea; }
+.success{ background:#10b981; }
+.warning{ background:#f59e0b; }
+.error{ background:#ef4444; }
+
+/* Typography */
+.typography h1{
+    font-size:28px;
+    margin-bottom:5px;
+}
+
+.typography h2{
+    font-size:22px;
+    margin-bottom:5px;
+}
+
+.typography p{
+    font-size:14px;
+    color:#6b7280;
+}
+
+/* Buttons */
+.btn{
+    display:inline-block;
+    padding:10px 15px;
+    background:#2563eb;
+    color:#fff;
+    border-radius:6px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.btn:hover{
+    background:#1e40af;
+}
+
+/* Grid */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Brand Guidelines</h1>
+        <p>Visual identity system for consistent branding</p>
+    </div>
+
+    <!-- Logo Section -->
+    <div class="section">
+        <h2>Logo Usage</h2>
+        <div class="logo-box">
+            <div class="logo">B</div>
+            <div class="logo dark">B</div>
+            <div class="logo light">B</div>
+        </div>
+        <p>Use consistent logo styles across all platforms. Maintain clear spacing and avoid distortion.</p>
+    </div>
+
+    <!-- Color Section -->
+    <div class="section">
+        <h2>Color Palette</h2>
+        <div class="colors">
+            <div class="color primary"></div>
+            <div class="color secondary"></div>
+            <div class="color success"></div>
+            <div class="color warning"></div>
+            <div class="color error"></div>
+        </div>
+        <p>Primary and semantic colors define brand identity and UI consistency.</p>
+    </div>
+
+    <!-- Typography -->
+    <div class="section typography">
+        <h2>Typography</h2>
+        <h1>Heading 1 - Brand Title</h1>
+        <h2>Heading 2 - Section Title</h2>
+        <p>Body text is used for readable content across all interfaces.</p>
+    </div>
+
+    <!-- Components -->
+    <div class="section">
+        <h2>UI Components</h2>
+
+        <div class="grid">
+            <div>
+                <p>Primary Button</p>
+                <a href="#" class="btn">Click Me</a>
+            </div>
+
+            <div>
+                <p>Guideline Note</p>
+                <p style="font-size:13px;color:#6b7280;">
+                    Maintain consistent spacing and alignment across UI components.
+                </p>
+            </div>
+
+            <div>
+                <p>Usage Rule</p>
+                <p style="font-size:13px;color:#6b7280;">
+                    Do not modify brand colors or typography without approval.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatbot UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* chat container */
+.chat{
+    width:360px;
+    height:640px;
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* header */
+.header{
+    background:linear-gradient(135deg,#2563eb,#9333ea);
+    color:#fff;
+    padding:15px;
+    text-align:center;
+}
+
+.header h2{
+    font-size:16px;
+}
+
+.header p{
+    font-size:11px;
+    opacity:0.9;
+}
+
+/* messages */
+.messages{
+    flex:1;
+    padding:15px;
+    overflow-y:auto;
+    background:#f4f7fc;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+/* bubbles */
+.msg{
+    max-width:75%;
+    padding:10px 12px;
+    border-radius:12px;
+    font-size:13px;
+    line-height:1.4;
+}
+
+.bot{
+    background:#e5e7eb;
+    align-self:flex-start;
+}
+
+.user{
+    background:#2563eb;
+    color:#fff;
+    align-self:flex-end;
+}
+
+/* input area */
+.input-box{
+    display:flex;
+    padding:10px;
+    background:#fff;
+    border-top:1px solid #e5e7eb;
+}
+
+input{
+    flex:1;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+}
+
+button{
+    margin-left:8px;
+    padding:10px 14px;
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* typing animation */
+.typing{
+    font-size:12px;
+    color:#6b7280;
+    font-style:italic;
+}
+</style>
+</head>
+<body>
+
+<div class="chat">
+
+    <!-- header -->
+    <div class="header">
+        <h2>AI Chatbot</h2>
+        <p>Ask me anything</p>
+    </div>
+
+    <!-- messages -->
+    <div class="messages" id="messages">
+
+        <div class="msg bot">Hello 👋 How can I help you today?</div>
+
+    </div>
+
+    <!-- input -->
+    <div class="input-box">
+        <input type="text" id="input" placeholder="Type a message...">
+        <button onclick="sendMsg()">Send</button>
+    </div>
+
+</div>
+
+<script>
+function sendMsg(){
+    let input = document.getElementById("input");
+    let msgBox = document.getElementById("messages");
+
+    if(input.value.trim() === "") return;
+
+    // user message
+    let userMsg = document.createElement("div");
+    userMsg.className = "msg user";
+    userMsg.innerText = input.value;
+    msgBox.appendChild(userMsg);
+
+    // bot typing
+    let typing = document.createElement("div");
+    typing.className = "msg bot typing";
+    typing.innerText = "Typing...";
+    msgBox.appendChild(typing);
+
+    msgBox.scrollTop = msgBox.scrollHeight;
+
+    let text = input.value;
+    input.value = "";
+
+    // fake bot reply
+    setTimeout(()=>{
+        typing.remove();
+
+        let botMsg = document.createElement("div");
+        botMsg.className = "msg bot";
+        botMsg.innerText = "You said: " + text;
+        msgBox.appendChild(botMsg);
+
+        msgBox.scrollTop = msgBox.scrollHeight;
+    }, 1000);
+}
+</script>
+
+</body>
+</html>

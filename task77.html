@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificate Template</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Georgia", serif;
+}
+
+body{
+    background:#f4f7fc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* Certificate */
+.certificate{
+    width:800px;
+    background:#fff;
+    padding:40px;
+    border:10px solid #2563eb;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    position:relative;
+}
+
+/* Inner border */
+.certificate::before{
+    content:"";
+    position:absolute;
+    top:15px;
+    left:15px;
+    right:15px;
+    bottom:15px;
+    border:2px solid #9333ea;
+}
+
+/* Header */
+.header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.header h1{
+    font-size:28px;
+    color:#2563eb;
+    letter-spacing:2px;
+}
+
+.header p{
+    font-size:14px;
+    color:#6b7280;
+}
+
+/* Body */
+.content{
+    text-align:center;
+    margin-top:40px;
+}
+
+.content h2{
+    font-size:20px;
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.name{
+    font-size:32px;
+    font-weight:bold;
+    color:#9333ea;
+    margin:20px 0;
+    text-transform:uppercase;
+}
+
+.text{
+    font-size:14px;
+    color:#555;
+    line-height:1.6;
+}
+
+/* Footer */
+.footer{
+    display:flex;
+    justify-content:space-between;
+    margin-top:60px;
+    font-size:14px;
+}
+
+.signature{
+    text-align:center;
+}
+
+.line{
+    width:150px;
+    height:1px;
+    background:#000;
+    margin:10px auto;
+}
+
+/* Badge */
+.badge{
+    position:absolute;
+    top:20px;
+    right:20px;
+    background:#2563eb;
+    color:#fff;
+    padding:8px 12px;
+    border-radius:20px;
+    font-size:12px;
+}
+</style>
+</head>
+<body>
+
+<div class="certificate">
+
+    <div class="badge">CERTIFIED</div>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>CERTIFICATE OF ACHIEVEMENT</h1>
+        <p>This certificate is proudly presented to</p>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="name">John Doe</div>
+
+        <div class="text">
+            For successfully completing the Web Development Course<br>
+            with outstanding performance and dedication.
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+
+        <div class="signature">
+            <div class="line"></div>
+            Instructor Signature
+        </div>
+
+        <div class="signature">
+            <div class="line"></div>
+            Director Signature
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

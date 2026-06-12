@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVG Illustration UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+    max-width:900px;
+    padding:20px;
+}
+
+/* Text section */
+.text{
+    max-width:400px;
+}
+
+.text h1{
+    font-size:2rem;
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.text p{
+    color:#555;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 15px;
+    background:#2563eb;
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+/* SVG animation */
+svg{
+    width:300px;
+    max-width:100%;
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{ transform:translateY(0px); }
+    50%{ transform:translateY(-15px); }
+    100%{ transform:translateY(0px); }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- SVG Illustration -->
+    <svg viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="80" fill="#2563eb" opacity="0.2"/>
+        <circle cx="100" cy="100" r="50" fill="#9333ea" opacity="0.3"/>
+        <rect x="70" y="70" width="60" height="60" rx="10" fill="#10b981"/>
+        <circle cx="100" cy="100" r="20" fill="#fff"/>
+    </svg>
+
+    <!-- Text Content -->
+    <div class="text">
+        <h1>SVG Illustration UI</h1>
+        <p>
+            Modern scalable vector graphics design with smooth animation.
+            Perfect for landing pages and dashboards.
+        </p>
+        <a href="#" class="btn">Learn More</a>
+    </div>
+
+</div>
+
+</body>
+</html>

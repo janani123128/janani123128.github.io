@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Buttons</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+/* Base Button */
+.btn{
+    padding:12px 20px;
+    border-radius:8px;
+    font-size:14px;
+    cursor:pointer;
+    border:none;
+    transition:0.3s;
+    text-decoration:none;
+    display:inline-block;
+}
+
+/* Solid Button */
+.btn-solid{
+    background:#2563eb;
+    color:#fff;
+}
+
+.btn-solid:hover{
+    background:#1e40af;
+}
+
+/* Outline Button */
+.btn-outline{
+    border:2px solid #2563eb;
+    color:#2563eb;
+    background:transparent;
+}
+
+.btn-outline:hover{
+    background:#2563eb;
+    color:#fff;
+}
+
+/* Gradient Button */
+.btn-gradient{
+    background:linear-gradient(135deg,#2563eb,#9333ea);
+    color:#fff;
+}
+
+.btn-gradient:hover{
+    opacity:0.9;
+}
+
+/* Glow Button */
+.btn-glow{
+    background:#10b981;
+    color:#fff;
+    box-shadow:0 0 10px #10b981;
+}
+
+.btn-glow:hover{
+    box-shadow:0 0 20px #10b981;
+}
+
+/* Neumorphism Button */
+.btn-neu{
+    background:#e0e5ec;
+    color:#333;
+    box-shadow:6px 6px 10px #a3b1c6,
+               -6px -6px 10px #ffffff;
+}
+
+.btn-neu:active{
+    box-shadow:inset 6px 6px 10px #a3b1c6,
+               inset -6px -6px 10px #ffffff;
+}
+
+/* Rounded Button */
+.btn-round{
+    background:#ef4444;
+    color:#fff;
+    border-radius:50px;
+}
+
+.btn-round:hover{
+    transform:scale(1.05);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <a class="btn btn-solid">Solid</a>
+    <a class="btn btn-outline">Outline</a>
+    <a class="btn btn-gradient">Gradient</a>
+    <a class="btn btn-glow">Glow</a>
+    <a class="btn btn-neu">Neumorphism</a>
+    <a class="btn btn-round">Rounded</a>
+
+</div>
+
+</body>
+</html>

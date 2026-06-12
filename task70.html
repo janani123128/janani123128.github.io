@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typography Hierarchy</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:system-ui, -apple-system, Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    padding:40px;
+}
+
+/* Container */
+.container{
+    max-width:800px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.1);
+}
+
+/* Label */
+.label{
+    font-size:12px;
+    letter-spacing:2px;
+    color:#2563eb;
+    margin-bottom:20px;
+    text-transform:uppercase;
+}
+
+/* Typography styles */
+h1{
+    font-size:42px;
+    margin-bottom:10px;
+    color:#111827;
+}
+
+h2{
+    font-size:32px;
+    margin-bottom:10px;
+    color:#1f2937;
+}
+
+h3{
+    font-size:24px;
+    margin-bottom:10px;
+    color:#374151;
+}
+
+h4{
+    font-size:18px;
+    margin-bottom:10px;
+    color:#4b5563;
+}
+
+p{
+    font-size:16px;
+    line-height:1.6;
+    color:#6b7280;
+    margin-bottom:10px;
+}
+
+.small{
+    font-size:12px;
+    color:#9ca3af;
+}
+
+/* Section spacing */
+.section{
+    margin-bottom:25px;
+    padding-bottom:15px;
+    border-bottom:1px solid #eee;
+}
+
+/* Highlight box */
+.highlight{
+    padding:10px 15px;
+    background:#eef2ff;
+    border-left:4px solid #2563eb;
+    color:#1e3a8a;
+    font-size:14px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="label">Typography System</div>
+
+    <!-- H1 -->
+    <div class="section">
+        <h1>Heading 1 - Hero Title</h1>
+        <p>Main page title used for landing pages or hero sections.</p>
+    </div>
+
+    <!-- H2 -->
+    <div class="section">
+        <h2>Heading 2 - Section Title</h2>
+        <p>Used for main sections inside a page.</p>
+    </div>
+
+    <!-- H3 -->
+    <div class="section">
+        <h3>Heading 3 - Sub Section</h3>
+        <p>Used for cards, subsections, or grouped content.</p>
+    </div>
+
+    <!-- H4 -->
+    <div class="section">
+        <h4>Heading 4 - Small Title</h4>
+        <p>Used for small components or labels inside UI blocks.</p>
+    </div>
+
+    <!-- Body -->
+    <div class="section">
+        <p>
+            This is body text used for paragraphs. It should be readable, balanced, and consistent across the UI system.
+        </p>
+
+        <div class="highlight">
+            This is a highlighted note or important message inside content.
+        </div>
+    </div>
+
+    <!-- Caption -->
+    <div class="section">
+        <p class="small">Caption text used for labels, hints, or metadata information.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

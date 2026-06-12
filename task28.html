@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Layout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+/* Navbar */
+.navbar{
+    background:#fff;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#2563eb;
+}
+
+.navbar a{
+    margin-left:15px;
+    text-decoration:none;
+    color:#333;
+}
+
+/* Layout */
+.container{
+    display:flex;
+    gap:20px;
+    max-width:1100px;
+    margin:20px auto;
+    padding:0 15px;
+}
+
+/* Main content */
+.main{
+    flex:3;
+}
+
+/* Sidebar */
+.sidebar{
+    flex:1;
+}
+
+/* Featured */
+.featured{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+}
+
+.featured .img{
+    height:200px;
+    background:#ddd;
+    border-radius:8px;
+    margin-bottom:15px;
+}
+
+/* Blog Cards */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:15px;
+}
+
+.card{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card .img{
+    height:120px;
+    background:#ddd;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+
+/* Sidebar Box */
+.box{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.box h3{
+    margin-bottom:10px;
+    color:#2563eb;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+    color:#fff;
+    margin-top:20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .container{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">MyBlog</div>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Posts</a>
+        <a href="#">Categories</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+
+<!-- Layout -->
+<div class="container">
+
+    <!-- Main -->
+    <div class="main">
+
+        <!-- Featured Post -->
+        <div class="featured">
+            <div class="img"></div>
+            <h2>Featured Blog Post Title</h2>
+            <p>Short description of the featured blog post goes here.</p>
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="grid">
+
+            <div class="card">
+                <div class="img"></div>
+                <h3>Blog Post 1</h3>
+                <p>Short preview text...</p>
+            </div>
+
+            <div class="card">
+                <div class="img"></div>
+                <h3>Blog Post 2</h3>
+                <p>Short preview text...</p>
+            </div>
+
+            <div class="card">
+                <div class="img"></div>
+                <h3>Blog Post 3</h3>
+                <p>Short preview text...</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="box">
+            <h3>About Me</h3>
+            <p>Short description about blogger.</p>
+        </div>
+
+        <div class="box">
+            <h3>Categories</h3>
+            <p>Tech, Design, Coding, UI</p>
+        </div>
+
+        <div class="box">
+            <h3>Recent Posts</h3>
+            <p>Post 1<br>Post 2<br>Post 3</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2026 MyBlog. All Rights Reserved.
+</footer>
+
+</body>
+</html>

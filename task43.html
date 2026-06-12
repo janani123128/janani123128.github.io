@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notification Panel</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Hide checkbox */
+#toggle{
+    display:none;
+}
+
+/* Bell button */
+.bell{
+    background:#2563eb;
+    color:#fff;
+    padding:12px 15px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+/* Panel */
+.panel{
+    position:absolute;
+    top:80px;
+    width:300px;
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+    overflow:hidden;
+    display:none;
+}
+
+/* Show panel when checked */
+#toggle:checked ~ .panel{
+    display:block;
+}
+
+/* Header */
+.panel-header{
+    background:#2563eb;
+    color:#fff;
+    padding:10px;
+    font-weight:bold;
+}
+
+/* Notification items */
+.item{
+    padding:12px;
+    border-bottom:1px solid #eee;
+    font-size:14px;
+}
+
+.item:hover{
+    background:#f0f4ff;
+}
+
+/* Badge */
+.badge{
+    background:red;
+    color:#fff;
+    font-size:12px;
+    padding:2px 6px;
+    border-radius:50%;
+    margin-left:5px;
+}
+</style>
+</head>
+<body>
+
+<!-- Toggle -->
+<input type="checkbox" id="toggle">
+
+<!-- Bell Button -->
+<label for="toggle" class="bell">
+    🔔 Notifications <span class="badge">3</span>
+</label>
+
+<!-- Panel -->
+<div class="panel">
+
+    <div class="panel-header">
+        Notifications
+    </div>
+
+    <div class="item">📩 New message received</div>
+    <div class="item">🛒 Order shipped successfully</div>
+    <div class="item">🔔 New login from device</div>
+    <div class="item">💬 Comment on your post</div>
+
+</div>
+
+</body>
+</html>

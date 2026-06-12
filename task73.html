@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Presentation</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    padding:40px;
+}
+
+/* Container */
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 2px 12px rgba(0,0,0,0.1);
+}
+
+/* Hero */
+.hero{
+    background:linear-gradient(135deg,#2563eb,#9333ea);
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:14px;
+    opacity:0.9;
+}
+
+/* Logo display */
+.logo-main{
+    margin:30px auto 0;
+    width:120px;
+    height:120px;
+    border-radius:20px;
+    background:#fff;
+    color:#2563eb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    font-weight:bold;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Section */
+.section{
+    padding:25px;
+    border-bottom:1px solid #eee;
+}
+
+.section h2{
+    margin-bottom:15px;
+    color:#111827;
+}
+
+/* Variations */
+.variations{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.logo-box{
+    width:120px;
+    height:120px;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:32px;
+    font-weight:bold;
+    color:#fff;
+}
+
+.primary{ background:#2563eb; }
+.dark{ background:#111827; }
+.light{ background:#e5e7eb; color:#111; }
+.gradient{ background:linear-gradient(135deg,#2563eb,#9333ea); }
+
+/* Usage rules */
+.rules{
+    font-size:14px;
+    color:#6b7280;
+    line-height:1.6;
+}
+
+/* Mockups */
+.mockups{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.mock{
+    height:120px;
+    background:#f1f5f9;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#94a3b8;
+    font-size:13px;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 15px;
+    background:#2563eb;
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+    font-size:14px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>Brand Logo Presentation</h1>
+        <p>Visual identity showcase and usage guidelines</p>
+
+        <div class="logo-main">B</div>
+    </div>
+
+    <!-- Variations -->
+    <div class="section">
+        <h2>Logo Variations</h2>
+
+        <div class="variations">
+            <div class="logo-box primary">B</div>
+            <div class="logo-box dark">B</div>
+            <div class="logo-box light">B</div>
+            <div class="logo-box gradient">B</div>
+        </div>
+    </div>
+
+    <!-- Usage Rules -->
+    <div class="section">
+        <h2>Usage Guidelines</h2>
+        <div class="rules">
+            ✔ Keep clear space around the logo<br>
+            ✔ Do not stretch or distort the logo<br>
+            ✔ Use approved brand colors only<br>
+            ✔ Maintain minimum size for readability<br>
+            ✔ Avoid low-contrast backgrounds
+        </div>
+    </div>
+
+    <!-- Mockups -->
+    <div class="section">
+        <h2>Logo in Use</h2>
+
+        <div class="mockups">
+            <div class="mock">Website Header</div>
+            <div class="mock">Mobile App Icon</div>
+            <div class="mock">Business Card</div>
+            <div class="mock">Social Media</div>
+        </div>
+
+        <a href="#" class="btn">Download Brand Kit</a>
+    </div>
+
+</div>
+
+</body>
+</html>

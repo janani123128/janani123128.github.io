@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkedIn Banner</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* Banner */
+.banner{
+    width:100%;
+    max-width:1000px;
+    height:250px;
+    background:linear-gradient(135deg,#0a66c2,#2563eb,#9333ea);
+    border-radius:12px;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:30px;
+    position:relative;
+    overflow:hidden;
+}
+
+/* Decorative circles */
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+    filter:blur(2px);
+}
+
+.circle1{
+    width:150px;
+    height:150px;
+    top:-40px;
+    right:-40px;
+}
+
+.circle2{
+    width:200px;
+    height:200px;
+    bottom:-60px;
+    left:-60px;
+}
+
+/* Text content */
+.content{
+    z-index:1;
+}
+
+.content h1{
+    font-size:2rem;
+    margin-bottom:5px;
+}
+
+.content p{
+    font-size:14px;
+    opacity:0.9;
+    margin-bottom:10px;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    padding:10px 15px;
+    background:#fff;
+    color:#0a66c2;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* Profile badge */
+.badge{
+    z-index:1;
+    text-align:right;
+}
+
+.badge h3{
+    font-size:16px;
+}
+
+.badge span{
+    font-size:12px;
+    opacity:0.9;
+}
+</style>
+</head>
+<body>
+
+<div class="banner">
+
+    <!-- Decorative elements -->
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+    <!-- Content -->
+    <div class="content">
+        <h1>John Doe</h1>
+        <p>Frontend Developer | UI/UX Designer | Freelancer</p>
+        <a href="#" class="btn">Contact Me</a>
+    </div>
+
+    <!-- Right badge -->
+    <div class="badge">
+        <h3>Open to Work</h3>
+        <span>Available for Freelance Projects</span>
+    </div>
+
+</div>
+
+</body>
+</html>

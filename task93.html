@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voice Assistant UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* main container */
+.assistant{
+    width:360px;
+    height:640px;
+    background:radial-gradient(circle at top,#1e293b,#0f172a);
+    border-radius:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 20px 50px rgba(0,0,0,0.5);
+    position:relative;
+    color:#fff;
+}
+
+/* title */
+h2{
+    font-size:18px;
+    margin-bottom:5px;
+}
+
+p{
+    font-size:12px;
+    opacity:0.7;
+}
+
+/* mic button */
+.mic{
+    width:90px;
+    height:90px;
+    background:linear-gradient(135deg,#2563eb,#9333ea);
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    cursor:pointer;
+    margin-top:40px;
+    box-shadow:0 0 20px rgba(37,99,235,0.6);
+    position:relative;
+}
+
+/* pulse rings */
+.mic::before,
+.mic::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    border:2px solid rgba(255,255,255,0.3);
+    animation:pulse 1.8s infinite;
+}
+
+.mic::after{
+    animation-delay:0.6s;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+        opacity:0.8;
+    }
+    100%{
+        transform:scale(2.2);
+        opacity:0;
+    }
+}
+
+/* waves */
+.waves{
+    position:absolute;
+    bottom:80px;
+    display:flex;
+    gap:4px;
+}
+
+.wave{
+    width:4px;
+    height:20px;
+    background:#60a5fa;
+    animation:wave 1s infinite ease-in-out;
+    border-radius:4px;
+}
+
+.wave:nth-child(2){ animation-delay:0.1s; }
+.wave:nth-child(3){ animation-delay:0.2s; }
+.wave:nth-child(4){ animation-delay:0.3s; }
+.wave:nth-child(5){ animation-delay:0.4s; }
+
+@keyframes wave{
+    0%,100%{ height:10px; }
+    50%{ height:40px; }
+}
+
+/* status */
+.status{
+    position:absolute;
+    bottom:20px;
+    font-size:12px;
+    opacity:0.7;
+}
+
+/* glowing background circles */
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(99,102,241,0.15);
+    filter:blur(20px);
+}
+
+.c1{
+    width:180px;
+    height:180px;
+    top:60px;
+    left:-40px;
+}
+
+.c2{
+    width:220px;
+    height:220px;
+    bottom:40px;
+    right:-60px;
+}
+</style>
+</head>
+<body>
+
+<div class="assistant">
+
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+
+    <h2>Voice Assistant</h2>
+    <p>Tap mic & speak</p>
+
+    <div class="mic">🎤</div>
+
+    <div class="waves">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+    <div class="status">Listening...</div>
+
+</div>
+
+</body>
+</html>

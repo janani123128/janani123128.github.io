@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fintech Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    display:flex;
+}
+
+/* Sidebar */
+.sidebar{
+    width:230px;
+    background:#0f172a;
+    color:#fff;
+    height:100vh;
+    padding:20px;
+}
+
+.sidebar h2{
+    color:#38bdf8;
+    margin-bottom:25px;
+}
+
+.sidebar a{
+    display:block;
+    color:#cbd5e1;
+    text-decoration:none;
+    padding:10px;
+    margin-bottom:8px;
+    border-radius:5px;
+}
+
+.sidebar a:hover{
+    background:#1e293b;
+}
+
+/* Main */
+.main{
+    flex:1;
+    padding:20px;
+}
+
+/* Topbar */
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:#2563eb;
+}
+
+/* Transactions */
+.table{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+    font-size:14px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    body{
+        flex-direction:column;
+    }
+    .sidebar{
+        width:100%;
+        height:auto;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>FinBank</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Accounts</a>
+    <a href="#">Transactions</a>
+    <a href="#">Cards</a>
+    <a href="#">Settings</a>
+</div>
+
+<!-- Main -->
+<div class="main">
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <h3>Dashboard</h3>
+        <span>Welcome, User</span>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Balance</h3>
+            <p>$12,450</p>
+        </div>
+
+        <div class="card">
+            <h3>Income</h3>
+            <p>$5,200</p>
+        </div>
+
+        <div class="card">
+            <h3>Expenses</h3>
+            <p>$2,300</p>
+        </div>
+
+        <div class="card">
+            <h3>Savings</h3>
+            <p>$3,900</p>
+        </div>
+
+    </div>
+
+    <!-- Transactions -->
+    <div class="table">
+        <h3>Recent Transactions</h3>
+
+        <div class="row">
+            <span>Amazon Purchase</span>
+            <span>-$120</span>
+        </div>
+
+        <div class="row">
+            <span>Salary</span>
+            <span>+$2,500</span>
+        </div>
+
+        <div class="row">
+            <span>Uber Ride</span>
+            <span>-$15</span>
+        </div>
+
+        <div class="row">
+            <span>Freelance</span>
+            <span>+$800</span>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

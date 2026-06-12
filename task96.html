@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smartwatch UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.watch{
+    width:280px;
+    height:350px;
+    background:#000;
+    border-radius:40px;
+    border:8px solid #374151;
+    padding:20px;
+    color:white;
+    box-shadow:0 0 25px rgba(59,130,246,0.4);
+}
+
+.time{
+    text-align:center;
+    margin-top:20px;
+}
+
+.time h1{
+    font-size:55px;
+    color:#38bdf8;
+}
+
+.time p{
+    color:#cbd5e1;
+}
+
+.stats{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.card{
+    background:#111827;
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.card h3{
+    font-size:14px;
+    color:#94a3b8;
+}
+
+.card p{
+    font-size:20px;
+    font-weight:bold;
+    color:#22c55e;
+}
+
+.bottom{
+    margin-top:25px;
+    text-align:center;
+}
+
+.btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:10px 25px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+</style>
+</head>
+<body>
+
+<div class="watch">
+
+    <div class="time">
+        <h1>10:45</h1>
+        <p>Friday, June 12</p>
+    </div>
+
+    <div class="stats">
+        <div class="card">
+            <h3>❤️ Heart Rate</h3>
+            <p>78</p>
+        </div>
+
+        <div class="card">
+            <h3>👣 Steps</h3>
+            <p>8,420</p>
+        </div>
+
+        <div class="card">
+            <h3>🔥 Calories</h3>
+            <p>420</p>
+        </div>
+
+        <div class="card">
+            <h3>🔋 Battery</h3>
+            <p>85%</p>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <button class="btn">Open Apps</button>
+    </div>
+
+</div>
+
+</body>
+</html>

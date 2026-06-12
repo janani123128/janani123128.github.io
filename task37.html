@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Media Feed UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+/* Navbar */
+.navbar{
+    background:#fff;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#2563eb;
+}
+
+.search{
+    width:40%;
+    padding:8px;
+    border:1px solid #ccc;
+    border-radius:20px;
+}
+
+/* Layout */
+.container{
+    display:flex;
+    gap:20px;
+    max-width:1100px;
+    margin:20px auto;
+    padding:0 15px;
+}
+
+/* Left sidebar */
+.sidebar{
+    flex:1;
+}
+
+.box{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Feed */
+.feed{
+    flex:2;
+}
+
+/* Stories */
+.stories{
+    display:flex;
+    gap:10px;
+    margin-bottom:15px;
+    overflow-x:auto;
+}
+
+.story{
+    min-width:60px;
+    height:60px;
+    background:#ddd;
+    border-radius:50%;
+    border:2px solid #2563eb;
+}
+
+/* Post */
+.post{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.post-img{
+    height:200px;
+    background:#ddd;
+    border-radius:8px;
+    margin:10px 0;
+}
+
+.actions{
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+    color:#555;
+}
+
+/* Right sidebar */
+.rightbar{
+    flex:1;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .container{
+        flex-direction:column;
+    }
+    .search{
+        width:60%;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">SocialApp</div>
+    <input class="search" type="text" placeholder="Search...">
+</div>
+
+<!-- Layout -->
+<div class="container">
+
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+        <div class="box">
+            <h3>Profile</h3>
+            <p>User Name</p>
+        </div>
+
+        <div class="box">
+            <h3>Menu</h3>
+            <p>Home<br>Messages<br>Notifications</p>
+        </div>
+    </div>
+
+    <!-- Feed -->
+    <div class="feed">
+
+        <!-- Stories -->
+        <div class="stories">
+            <div class="story"></div>
+            <div class="story"></div>
+            <div class="story"></div>
+            <div class="story"></div>
+            <div class="story"></div>
+        </div>
+
+        <!-- Post 1 -->
+        <div class="post">
+            <h4>John Doe</h4>
+            <div class="post-img"></div>
+            <p>Beautiful day in nature 🌿</p>
+            <div class="actions">
+                <span>Like</span>
+                <span>Comment</span>
+                <span>Share</span>
+            </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="post">
+            <h4>Sarah Smith</h4>
+            <div class="post-img"></div>
+            <p>Enjoying my vacation ✈️</p>
+            <div class="actions">
+                <span>Like</span>
+                <span>Comment</span>
+                <span>Share</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="rightbar">
+
+        <div class="box">
+            <h3>Friend Suggestions</h3>
+            <p>Alex<br>Emma<br>Michael</p>
+        </div>
+
+        <div class="box">
+            <h3>Trending</h3>
+            <p>#Tech<br>#Travel<br>#Music</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Media Feed UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+/* Navbar */
+.navbar{
+    background:#fff;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#2563eb;
+}
+
+.search{
+    width:40%;
+    padding:8px;
+    border:1px solid #ccc;
+    border-radius:20px;
+}
+
+/* Layout */
+.container{
+    display:flex;
+    gap:20px;
+    max-width:1100px;
+    margin:20px auto;
+    padding:0 15px;
+}
+
+/* Left sidebar */
+.sidebar{
+    flex:1;
+}
+
+.box{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Feed */
+.feed{
+    flex:2;
+}
+
+/* Stories */
+.stories{
+    display:flex;
+    gap:10px;
+    margin-bottom:15px;
+    overflow-x:auto;
+}
+
+.story{
+    min-width:60px;
+    height:60px;
+    background:#ddd;
+    border-radius:50%;
+    border:2px solid #2563eb;
+}
+
+/* Post */
+.post{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.post-img{
+    height:200px;
+    background:#ddd;
+    border-radius:8px;
+    margin:10px 0;
+}
+
+.actions{
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+    color:#555;
+}
+
+/* Right sidebar */
+.rightbar{
+    flex:1;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .container{
+        flex-direction:column;
+    }
+    .search{
+        width:60%;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">SocialApp</div>
+    <input class="search" type="text" placeholder="Search...">
+</div>
+
+<!-- Layout -->
+<div class="container">
+
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+        <div class="box">
+            <h3>Profile</h3>
+            <p>User Name</p>
+        </div>
+
+        <div class="box">
+            <h3>Menu</h3>
+            <p>Home<br>Messages<br>Notifications</p>
+        </div>
+    </div>
+
+    <!-- Feed -->
+    <div class="feed">
+
+        <!-- Stories -->
+        <div class="stories">
+            <div class="story"></div>
+            <div class="story"></div>
+            <div class="story"></div>
+            <div class="story"></div>
+            <div class="story"></div>
+        </div>
+
+        <!-- Post 1 -->
+        <div class="post">
+            <h4>John Doe</h4>
+            <div class="post-img"></div>
+            <p>Beautiful day in nature 🌿</p>
+            <div class="actions">
+                <span>Like</span>
+                <span>Comment</span>
+                <span>Share</span>
+            </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="post">
+            <h4>Sarah Smith</h4>
+            <div class="post-img"></div>
+            <p>Enjoying my vacation ✈️</p>
+            <div class="actions">
+                <span>Like</span>
+                <span>Comment</span>
+                <span>Share</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="rightbar">
+
+        <div class="box">
+            <h3>Friend Suggestions</h3>
+            <p>Alex<br>Emma<br>Michael</p>
+        </div>
+
+        <div class="box">
+            <h3>Trending</h3>
+            <p>#Tech<br>#Travel<br>#Music</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

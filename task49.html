@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagination UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* Pagination container */
+.pagination{
+    display:flex;
+    gap:8px;
+    background:#fff;
+    padding:12px 15px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Page items */
+.page{
+    padding:8px 12px;
+    border-radius:6px;
+    text-decoration:none;
+    color:#333;
+    border:1px solid #ddd;
+    transition:0.3s;
+    font-size:14px;
+}
+
+/* Hover */
+.page:hover{
+    background:#2563eb;
+    color:#fff;
+    border-color:#2563eb;
+}
+
+/* Active page */
+.page.active{
+    background:#2563eb;
+    color:#fff;
+    border-color:#2563eb;
+}
+
+/* Disabled arrows */
+.page.disabled{
+    color:#aaa;
+    pointer-events:none;
+    background:#f1f1f1;
+}
+
+/* Responsive */
+@media(max-width:500px){
+    .pagination{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Pagination -->
+<div class="pagination">
+
+    <a href="#" class="page disabled">Prev</a>
+    <a href="#" class="page active">1</a>
+    <a href="#" class="page">2</a>
+    <a href="#" class="page">3</a>
+    <a href="#" class="page">4</a>
+    <a href="#" class="page">5</a>
+    <a href="#" class="page">Next</a>
+
+</div>
+
+</body>
+</html>

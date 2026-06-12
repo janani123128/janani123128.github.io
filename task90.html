@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Splash Screen</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* phone frame */
+.app{
+    width:340px;
+    height:620px;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,0.5);
+    background:linear-gradient(135deg,#2563eb,#9333ea,#111827);
+    position:relative;
+    color:#fff;
+}
+
+/* center content */
+.center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+
+/* logo */
+.logo{
+    width:90px;
+    height:90px;
+    margin:auto;
+    border-radius:20px;
+    background:rgba(255,255,255,0.2);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    font-weight:bold;
+    backdrop-filter:blur(10px);
+}
+
+/* app name */
+h1{
+    margin-top:15px;
+    font-size:22px;
+    letter-spacing:1px;
+}
+
+p{
+    font-size:12px;
+    opacity:0.8;
+    margin-top:5px;
+}
+
+/* loader */
+.loader{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:6px;
+}
+
+.dot{
+    width:8px;
+    height:8px;
+    background:#fff;
+    border-radius:50%;
+    animation:bounce 1s infinite ease-in-out;
+}
+
+.dot:nth-child(2){
+    animation-delay:0.2s;
+}
+
+.dot:nth-child(3){
+    animation-delay:0.4s;
+}
+
+@keyframes bounce{
+    0%,100%{ transform:translateY(0); opacity:0.5; }
+    50%{ transform:translateY(-8px); opacity:1; }
+}
+
+/* footer text */
+.footer{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+    text-align:center;
+    font-size:11px;
+    opacity:0.7;
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+
+    <div class="center">
+
+        <div class="logo">A</div>
+
+        <h1>AppName</h1>
+        <p>Loading your experience...</p>
+
+        <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Powered by Modern UI System
+    </div>
+
+</div>
+
+</body>
+</html>

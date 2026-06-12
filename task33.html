@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Delivery UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+/* Navbar */
+.navbar{
+    background:#fff;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#ef4444;
+}
+
+.navbar a{
+    margin-left:15px;
+    text-decoration:none;
+    color:#333;
+}
+
+/* Hero */
+.hero{
+    background:linear-gradient(135deg,#ef4444,#f97316);
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.hero p{
+    margin-bottom:20px;
+}
+
+.hero button{
+    padding:12px 25px;
+    border:none;
+    background:#fff;
+    color:#ef4444;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* Food Menu */
+.menu{
+    padding:40px 20px;
+    text-align:center;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.card{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.img{
+    height:150px;
+    background:#ddd;
+}
+
+.card-content{
+    padding:15px;
+}
+
+.price{
+    color:#ef4444;
+    font-weight:bold;
+    margin-top:5px;
+}
+
+button{
+    margin-top:10px;
+    padding:10px;
+    width:100%;
+    border:none;
+    background:#ef4444;
+    color:#fff;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#dc2626;
+}
+
+/* Footer */
+footer{
+    background:#111827;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero h1{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">Foodie</div>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Offers</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+    <h1>Delicious Food Delivered Fast</h1>
+    <p>Order your favorite meals online</p>
+    <button>Order Now</button>
+</section>
+
+<!-- Menu -->
+<section class="menu">
+    <h2>Popular Dishes</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="img"></div>
+            <div class="card-content">
+                <h3>Burger</h3>
+                <p class="price">$5</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img"></div>
+            <div class="card-content">
+                <h3>Pizza</h3>
+                <p class="price">$8</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img"></div>
+            <div class="card-content">
+                <h3>Pasta</h3>
+                <p class="price">$6</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img"></div>
+            <div class="card-content">
+                <h3>Sandwich</h3>
+                <p class="price">$4</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    © 2026 Foodie. All Rights Reserved.
+</footer>
+
+</body>
+</html>

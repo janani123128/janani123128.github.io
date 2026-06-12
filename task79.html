@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Poster</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* Poster */
+.poster{
+    width:100%;
+    max-width:750px;
+    background:linear-gradient(135deg,#111827,#2563eb,#9333ea);
+    color:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+    position:relative;
+}
+
+/* Decorative circles */
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.1);
+}
+
+.circle1{
+    width:200px;
+    height:200px;
+    top:-60px;
+    right:-60px;
+}
+
+.circle2{
+    width:150px;
+    height:150px;
+    bottom:-50px;
+    left:-50px;
+}
+
+/* Content */
+.content{
+    padding:40px;
+    text-align:center;
+    position:relative;
+    z-index:1;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 14px;
+    background:#fff;
+    color:#2563eb;
+    font-weight:bold;
+    border-radius:30px;
+    font-size:12px;
+    margin-bottom:15px;
+}
+
+h1{
+    font-size:2.2rem;
+    margin-bottom:10px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+p{
+    font-size:14px;
+    opacity:0.9;
+    margin-bottom:20px;
+    line-height:1.5;
+}
+
+/* Info grid */
+.info{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+.box{
+    background:rgba(255,255,255,0.15);
+    padding:12px 15px;
+    border-radius:10px;
+    font-size:13px;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    padding:12px 18px;
+    background:#fff;
+    color:#111827;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* Footer */
+.footer{
+    background:rgba(0,0,0,0.2);
+    text-align:center;
+    padding:10px;
+    font-size:12px;
+}
+
+/* Responsive */
+@media(max-width:600px){
+    h1{
+        font-size:1.6rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="poster">
+
+    <!-- decorative -->
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+    <!-- content -->
+    <div class="content">
+
+        <div class="badge">LIVE EVENT 2026</div>
+
+        <h1>Tech Conference</h1>
+        <p>
+            Join the biggest tech event of the year. Learn, network, and grow with industry experts.
+        </p>
+
+        <div class="info">
+            <div class="box">📅 June 25, 2026</div>
+            <div class="box">📍 Bangalore, India</div>
+            <div class="box">⏰ 10:00 AM</div>
+        </div>
+
+        <a href="#" class="btn">Register Now</a>
+
+    </div>
+
+    <div class="footer">
+        Limited seats available • Book early
+    </div>
+
+</div>
+
+</body>
+</html>

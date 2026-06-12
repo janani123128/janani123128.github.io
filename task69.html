@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter Layout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    padding:20px;
+}
+
+/* Container */
+.newsletter{
+    max-width:700px;
+    margin:auto;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 2px 12px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.header{
+    background:linear-gradient(135deg,#2563eb,#9333ea);
+    color:#fff;
+    text-align:center;
+    padding:30px;
+}
+
+.header h1{
+    margin-bottom:5px;
+}
+
+.header p{
+    font-size:14px;
+    opacity:0.9;
+}
+
+/* Featured */
+.featured{
+    padding:20px;
+    text-align:center;
+}
+
+.featured h2{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.featured p{
+    font-size:14px;
+    color:#555;
+    line-height:1.5;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 15px;
+    background:#2563eb;
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+    padding:20px;
+}
+
+.card{
+    background:#f9fafb;
+    padding:15px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    background:#eef2ff;
+}
+
+.card h3{
+    color:#111827;
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.card p{
+    font-size:13px;
+    color:#6b7280;
+}
+
+/* Footer */
+.footer{
+    text-align:center;
+    padding:15px;
+    font-size:12px;
+    color:#888;
+    background:#f1f5f9;
+}
+</style>
+</head>
+<body>
+
+<div class="newsletter">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Weekly Newsletter</h1>
+        <p>Latest updates, tips & articles</p>
+    </div>
+
+    <!-- Featured Section -->
+    <div class="featured">
+        <h2>Featured Story</h2>
+        <p>
+            Discover the latest trends in web design, development, and UI/UX. Stay ahead with expert insights and tutorials.
+        </p>
+        <a href="#" class="btn">Read More</a>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards">
+
+        <div class="card">
+            <h3>UI Design Tips</h3>
+            <p>Improve your interface design skills easily.</p>
+        </div>
+
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>Learn modern frontend techniques.</p>
+        </div>
+
+        <div class="card">
+            <h3>Trends 2026</h3>
+            <p>Explore latest design trends in tech.</p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2026 Newsletter. All rights reserved.
+    </div>
+
+</div>
+
+</body>
+</html>

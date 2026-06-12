@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News Portal</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+/* Navbar */
+.navbar{
+    background:#111827;
+    color:#fff;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#facc15;
+}
+
+.navbar a{
+    color:#fff;
+    margin-left:15px;
+    text-decoration:none;
+}
+
+/* Breaking News */
+.breaking{
+    background:#ef4444;
+    color:#fff;
+    padding:10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* Layout */
+.container{
+    display:flex;
+    gap:20px;
+    max-width:1100px;
+    margin:20px auto;
+    padding:0 15px;
+}
+
+/* Main News */
+.main{
+    flex:3;
+}
+
+/* Sidebar */
+.sidebar{
+    flex:1;
+}
+
+/* News Card */
+.card{
+    background:#fff;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card .img{
+    height:150px;
+    background:#ddd;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+
+/* Headline */
+.card h3{
+    color:#111827;
+    margin-bottom:8px;
+}
+
+/* Sidebar Box */
+.box{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.box h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+    color:#fff;
+    margin-top:20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .container{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">News24</div>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">India</a>
+        <a href="#">World</a>
+        <a href="#">Sports</a>
+    </div>
+</div>
+
+<!-- Breaking News -->
+<div class="breaking">
+    🔴 Breaking News: Latest updates are live now!
+</div>
+
+<!-- Layout -->
+<div class="container">
+
+    <!-- Main News -->
+    <div class="main">
+
+        <div class="card">
+            <div class="img"></div>
+            <h3>Big News Headline 1</h3>
+            <p>Short description of the news article goes here...</p>
+        </div>
+
+        <div class="card">
+            <div class="img"></div>
+            <h3>Big News Headline 2</h3>
+            <p>Short description of the news article goes here...</p>
+        </div>
+
+        <div class="card">
+            <div class="img"></div>
+            <h3>Big News Headline 3</h3>
+            <p>Short description of the news article goes here...</p>
+        </div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="box">
+            <h3>Top Stories</h3>
+            <p>Story 1<br>Story 2<br>Story 3</p>
+        </div>
+
+        <div class="box">
+            <h3>Trending</h3>
+            <p>Politics<br>Sports<br>Technology</p>
+        </div>
+
+        <div class="box">
+            <h3>Weather</h3>
+            <p>Sunny - 32°C</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2026 News24 Portal. All Rights Reserved.
+</footer>
+
+</body>
+</html>

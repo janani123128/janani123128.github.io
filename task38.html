@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat App UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    display:flex;
+    height:100vh;
+}
+
+/* Left Chat List */
+.sidebar{
+    width:300px;
+    background:#fff;
+    border-right:1px solid #ddd;
+    display:flex;
+    flex-direction:column;
+}
+
+.sidebar h2{
+    padding:15px;
+    color:#2563eb;
+    border-bottom:1px solid #eee;
+}
+
+.chat-list{
+    overflow-y:auto;
+}
+
+.user{
+    display:flex;
+    align-items:center;
+    padding:12px;
+    border-bottom:1px solid #f1f1f1;
+    cursor:pointer;
+}
+
+.user:hover{
+    background:#f0f4ff;
+}
+
+.avatar{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#ddd;
+    margin-right:10px;
+}
+
+.user p{
+    font-size:14px;
+    color:#333;
+}
+
+/* Chat Window */
+.chat{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+/* Header */
+.chat-header{
+    background:#fff;
+    padding:15px;
+    border-bottom:1px solid #ddd;
+    display:flex;
+    align-items:center;
+}
+
+.chat-header .avatar{
+    margin-right:10px;
+}
+
+/* Messages */
+.messages{
+    flex:1;
+    padding:15px;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.msg{
+    max-width:60%;
+    padding:10px;
+    border-radius:10px;
+    font-size:14px;
+}
+
+.sent{
+    background:#2563eb;
+    color:#fff;
+    align-self:flex-end;
+}
+
+.received{
+    background:#e5e7eb;
+    color:#333;
+    align-self:flex-start;
+}
+
+/* Input Box */
+.input-box{
+    display:flex;
+    padding:10px;
+    border-top:1px solid #ddd;
+    background:#fff;
+}
+
+.input-box input{
+    flex:1;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:20px;
+    outline:none;
+}
+
+.input-box button{
+    margin-left:10px;
+    padding:10px 15px;
+    border:none;
+    background:#2563eb;
+    color:#fff;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.input-box button:hover{
+    background:#1e40af;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .sidebar{
+        display:none;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Chats</h2>
+
+    <div class="chat-list">
+
+        <div class="user">
+            <div class="avatar"></div>
+            <p>John Doe</p>
+        </div>
+
+        <div class="user">
+            <div class="avatar"></div>
+            <p>Sarah Smith</p>
+        </div>
+
+        <div class="user">
+            <div class="avatar"></div>
+            <p>Michael Lee</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- Chat Window -->
+<div class="chat">
+
+    <!-- Header -->
+    <div class="chat-header">
+        <div class="avatar"></div>
+        <h4>John Doe</h4>
+    </div>
+
+    <!-- Messages -->
+    <div class="messages">
+
+        <div class="msg received">Hi there 👋</div>
+        <div class="msg sent">Hello! How are you?</div>
+        <div class="msg received">I'm good, what about you?</div>
+        <div class="msg sent">Doing great!</div>
+
+    </div>
+
+    <!-- Input -->
+    <div class="input-box">
+        <input type="text" placeholder="Type a message...">
+        <button>Send</button>
+    </div>
+
+</div>
+
+</body>
+</html>

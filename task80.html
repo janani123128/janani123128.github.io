@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webinar Poster</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* Poster */
+.poster{
+    width:100%;
+    max-width:800px;
+    background:linear-gradient(135deg,#0f172a,#2563eb,#9333ea);
+    color:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+    position:relative;
+}
+
+/* decorative shapes */
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.08);
+}
+
+.circle1{
+    width:220px;
+    height:220px;
+    top:-70px;
+    right:-70px;
+}
+
+.circle2{
+    width:160px;
+    height:160px;
+    bottom:-60px;
+    left:-60px;
+}
+
+/* content */
+.content{
+    padding:45px;
+    text-align:center;
+    position:relative;
+    z-index:1;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 14px;
+    background:#fff;
+    color:#2563eb;
+    font-weight:bold;
+    border-radius:30px;
+    font-size:12px;
+    margin-bottom:15px;
+}
+
+h1{
+    font-size:2.2rem;
+    margin-bottom:10px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.subtitle{
+    font-size:14px;
+    opacity:0.9;
+    margin-bottom:20px;
+    line-height:1.5;
+}
+
+/* info boxes */
+.info{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+.box{
+    background:rgba(255,255,255,0.15);
+    padding:12px 15px;
+    border-radius:10px;
+    font-size:13px;
+}
+
+/* speaker */
+.speaker{
+    margin:20px 0;
+    font-size:14px;
+}
+
+.speaker strong{
+    color:#facc15;
+}
+
+/* button */
+.btn{
+    display:inline-block;
+    padding:12px 20px;
+    background:#fff;
+    color:#111827;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* footer */
+.footer{
+    background:rgba(0,0,0,0.25);
+    text-align:center;
+    padding:10px;
+    font-size:12px;
+}
+
+/* responsive */
+@media(max-width:600px){
+    h1{
+        font-size:1.6rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="poster">
+
+    <!-- decorative -->
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+    <!-- content -->
+    <div class="content">
+
+        <div class="badge">FREE WEBINAR</div>
+
+        <h1>Master Web Development</h1>
+
+        <p class="subtitle">
+            Learn modern HTML, CSS & JavaScript techniques from industry experts and build real-world projects.
+        </p>
+
+        <div class="info">
+            <div class="box">📅 June 30, 2026</div>
+            <div class="box">⏰ 7:00 PM IST</div>
+            <div class="box">💻 Online Live</div>
+        </div>
+
+        <div class="speaker">
+            Hosted by <strong>Senior Web Developer Team</strong>
+        </div>
+
+        <a href="#" class="btn">Register Free</a>
+
+    </div>
+
+    <div class="footer">
+        Limited seats • Join from anywhere
+    </div>
+
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webinar Poster</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* Poster */
+.poster{
+    width:100%;
+    max-width:800px;
+    background:linear-gradient(135deg,#0f172a,#2563eb,#9333ea);
+    color:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+    position:relative;
+}
+
+/* decorative shapes */
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.08);
+}
+
+.circle1{
+    width:220px;
+    height:220px;
+    top:-70px;
+    right:-70px;
+}
+
+.circle2{
+    width:160px;
+    height:160px;
+    bottom:-60px;
+    left:-60px;
+}
+
+/* content */
+.content{
+    padding:45px;
+    text-align:center;
+    position:relative;
+    z-index:1;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 14px;
+    background:#fff;
+    color:#2563eb;
+    font-weight:bold;
+    border-radius:30px;
+    font-size:12px;
+    margin-bottom:15px;
+}
+
+h1{
+    font-size:2.2rem;
+    margin-bottom:10px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.subtitle{
+    font-size:14px;
+    opacity:0.9;
+    margin-bottom:20px;
+    line-height:1.5;
+}
+
+/* info boxes */
+.info{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+.box{
+    background:rgba(255,255,255,0.15);
+    padding:12px 15px;
+    border-radius:10px;
+    font-size:13px;
+}
+
+/* speaker */
+.speaker{
+    margin:20px 0;
+    font-size:14px;
+}
+
+.speaker strong{
+    color:#facc15;
+}
+
+/* button */
+.btn{
+    display:inline-block;
+    padding:12px 20px;
+    background:#fff;
+    color:#111827;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* footer */
+.footer{
+    background:rgba(0,0,0,0.25);
+    text-align:center;
+    padding:10px;
+    font-size:12px;
+}
+
+/* responsive */
+@media(max-width:600px){
+    h1{
+        font-size:1.6rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="poster">
+
+    <!-- decorative -->
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+    <!-- content -->
+    <div class="content">
+
+        <div class="badge">FREE WEBINAR</div>
+
+        <h1>Master Web Development</h1>
+
+        <p class="subtitle">
+            Learn modern HTML, CSS & JavaScript techniques from industry experts and build real-world projects.
+        </p>
+
+        <div class="info">
+            <div class="box">📅 June 30, 2026</div>
+            <div class="box">⏰ 7:00 PM IST</div>
+            <div class="box">💻 Online Live</div>
+        </div>
+
+        <div class="speaker">
+            Hosted by <strong>Senior Web Developer Team</strong>
+        </div>
+
+        <a href="#" class="btn">Register Free</a>
+
+    </div>
+
+    <div class="footer">
+        Limited seats • Join from anywhere
+    </div>
+
+</div>
+
+</body>
+</html>

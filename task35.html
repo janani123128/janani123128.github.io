@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM Dashboard UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    background:#f4f7fc;
+}
+
+/* Sidebar */
+.sidebar{
+    width:240px;
+    background:#0f172a;
+    color:#fff;
+    height:100vh;
+    padding:20px;
+}
+
+.sidebar h2{
+    color:#38bdf8;
+    margin-bottom:25px;
+}
+
+.sidebar a{
+    display:block;
+    color:#cbd5e1;
+    text-decoration:none;
+    padding:10px;
+    margin-bottom:8px;
+    border-radius:5px;
+}
+
+.sidebar a:hover{
+    background:#1e293b;
+}
+
+/* Main */
+.main{
+    flex:1;
+    padding:20px;
+}
+
+/* Topbar */
+.topbar{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:#2563eb;
+}
+
+/* Layout bottom */
+.bottom{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+}
+
+/* Table */
+.table{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+    font-size:14px;
+}
+
+/* Activity */
+.activity{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.activity p{
+    padding:8px 0;
+    border-bottom:1px solid #eee;
+    font-size:14px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    body{
+        flex-direction:column;
+    }
+    .sidebar{
+        width:100%;
+        height:auto;
+    }
+    .bottom{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>CRM Pro</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Leads</a>
+    <a href="#">Customers</a>
+    <a href="#">Deals</a>
+    <a href="#">Reports</a>
+</div>
+
+<!-- Main -->
+<div class="main">
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <h3>CRM Dashboard</h3>
+        <span>Admin Panel</span>
+    </div>
+
+    <!-- Stats -->
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Leads</h3>
+            <p>1,240</p>
+        </div>
+
+        <div class="card">
+            <h3>Customers</h3>
+            <p>860</p>
+        </div>
+
+        <div class="card">
+            <h3>Deals</h3>
+            <p>320</p>
+        </div>
+
+        <div class="card">
+            <h3>Revenue</h3>
+            <p>$45,000</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="bottom">
+
+        <!-- Leads Table -->
+        <div class="table">
+            <h3>Recent Leads</h3>
+
+            <div class="row">
+                <span>John Doe</span>
+                <span>New</span>
+            </div>
+
+            <div class="row">
+                <span>Sarah Smith</span>
+                <span>Contacted</span>
+            </div>
+
+            <div class="row">
+                <span>Michael Lee</span>
+                <span>Qualified</span>
+            </div>
+
+            <div class="row">
+                <span>Emma Brown</span>
+                <span>Proposal</span>
+            </div>
+
+        </div>
+
+        <!-- Activity -->
+        <div class="activity">
+            <h3>Recent Activity</h3>
+
+            <p>✔ New lead added</p>
+            <p>✔ Deal closed</p>
+            <p>✔ Customer contacted</p>
+            <p>✔ Report generated</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

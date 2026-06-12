@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JananiTech | Web Development & Cyber Security</title>
+
+<meta name="description"
+content="JananiTech provides web development, cyber security solutions, SEO services, and digital technology insights.">
+
+<meta name="keywords"
+content="Web Development, Cyber Security, SEO, HTML, CSS, JananiTech">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#333;
+}
+
+header{
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+nav{
+    background:#1e293b;
+    padding:15px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h2{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>JananiTech</h1>
+    <p>Web Development & Cyber Security Solutions</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<section class="hero">
+    <h1>Professional Web Development Services</h1>
+    <p>
+        We help businesses grow with responsive websites,
+        SEO optimization, and cyber security solutions.
+    </p>
+</section>
+
+<section class="services">
+
+    <article class="card">
+        <h2>Web Development</h2>
+        <p>Modern responsive websites using HTML, CSS, JavaScript.</p>
+    </article>
+
+    <article class="card">
+        <h2>Cyber Security</h2>
+        <p>Protect systems and networks from digital threats.</p>
+    </article>
+
+    <article class="card">
+        <h2>SEO Optimization</h2>
+        <p>Improve search rankings and website visibility.</p>
+    </article>
+
+</section>
+
+</main>
+
+<footer>
+    © 2026 JananiTech | SEO Friendly Website
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Educational Brochure</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    padding:30px;
+    display:flex;
+    justify-content:center;
+}
+
+/* Brochure layout */
+.brochure{
+    width:100%;
+    max-width:1000px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+/* Panel */
+.panel{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 2px 12px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.header{
+    background:linear-gradient(135deg,#2563eb,#9333ea);
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+.header h2{
+    font-size:18px;
+}
+
+.header p{
+    font-size:12px;
+    opacity:0.9;
+}
+
+/* Content */
+.content{
+    padding:15px;
+}
+
+.content h3{
+    color:#111827;
+    margin-bottom:8px;
+}
+
+.content p{
+    font-size:13px;
+    color:#6b7280;
+    line-height:1.5;
+}
+
+/* course box */
+.course{
+    background:#f9fafb;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:10px;
+    transition:0.3s;
+}
+
+.course:hover{
+    background:#eef2ff;
+    transform:translateY(-3px);
+}
+
+/* highlight */
+.highlight{
+    background:#111827;
+    color:#fff;
+    padding:15px;
+    border-radius:8px;
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* button */
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 12px;
+    background:#2563eb;
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+    font-size:12px;
+}
+
+/* responsive */
+@media(max-width:900px){
+    .brochure{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="brochure">
+
+    <!-- LEFT PANEL -->
+    <div class="panel">
+        <div class="header">
+            <h2>Our Institute</h2>
+            <p>Learn • Grow • Succeed</p>
+        </div>
+
+        <div class="content">
+            <h3>About Us</h3>
+            <p>
+                We provide high-quality education in technology, design, and business with expert mentors.
+            </p>
+        </div>
+    </div>
+
+    <!-- MIDDLE PANEL -->
+    <div class="panel">
+        <div class="header">
+            <h2>Courses</h2>
+            <p>What we offer</p>
+        </div>
+
+        <div class="content">
+            <div class="course">Web Development</div>
+            <div class="course">UI/UX Design</div>
+            <div class="course">Data Science</div>
+            <div class="course">Digital Marketing</div>
+
+            <a href="#" class="btn">Explore More</a>
+        </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="panel">
+        <div class="header">
+            <h2>Admissions</h2>
+            <p>Join Now</p>
+        </div>
+
+        <div class="content">
+            <div class="highlight">
+                ✔ Certified Courses<br>
+                ✔ Expert Trainers<br>
+                ✔ Placement Support<br>
+                ✔ Flexible Learning
+            </div>
+
+            <a href="#" class="btn">Apply Now</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

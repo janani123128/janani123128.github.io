@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onboarding Screens</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* phone frame */
+.phone{
+    width:340px;
+    height:620px;
+    background:#fff;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,0.5);
+    position:relative;
+}
+
+/* slides container */
+.slides{
+    display:flex;
+    width:300%;
+    height:100%;
+    transition:0.5s ease;
+}
+
+/* each screen */
+.slide{
+    width:340px;
+    height:100%;
+    padding:40px 25px;
+    text-align:center;
+    flex-shrink:0;
+}
+
+/* icons */
+.icon{
+    width:120px;
+    height:120px;
+    margin:40px auto 20px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2563eb,#9333ea);
+}
+
+/* text */
+h2{
+    margin-top:20px;
+    font-size:22px;
+    color:#111827;
+}
+
+p{
+    font-size:13px;
+    color:#6b7280;
+    margin-top:10px;
+    line-height:1.5;
+}
+
+/* buttons */
+.btn{
+    display:block;
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+    color:#fff;
+    background:#2563eb;
+}
+
+.skip{
+    background:transparent;
+    color:#6b7280;
+    margin-top:10px;
+    font-size:13px;
+}
+
+/* dots */
+.dots{
+    position:absolute;
+    bottom:80px;
+    width:100%;
+    text-align:center;
+}
+
+.dot{
+    height:8px;
+    width:8px;
+    display:inline-block;
+    margin:0 4px;
+    border-radius:50%;
+    background:#d1d5db;
+}
+
+.active{
+    background:#2563eb;
+}
+
+/* footer */
+.footer{
+    position:absolute;
+    bottom:15px;
+    width:100%;
+    padding:0 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="phone">
+
+    <div class="slides" id="slides">
+
+        <!-- Slide 1 -->
+        <div class="slide">
+            <div class="icon"></div>
+            <h2>Welcome</h2>
+            <p>Discover amazing features and modern UI experience.</p>
+
+            <button class="btn" onclick="next()">Next</button>
+            <div class="skip" onclick="skip()">Skip</div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <div class="icon" style="background:linear-gradient(135deg,#10b981,#2563eb)"></div>
+            <h2>Easy to Use</h2>
+            <p>Simple navigation and smooth user experience built for everyone.</p>
+
+            <button class="btn" onclick="next()">Next</button>
+            <div class="skip" onclick="skip()">Skip</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#ef4444)"></div>
+            <h2>Get Started</h2>
+            <p>Start your journey now and explore all features.</p>
+
+            <button class="btn" onclick="finish()">Get Started</button>
+            <div class="skip" onclick="skip()">Skip</div>
+        </div>
+
+    </div>
+
+    <!-- dots -->
+    <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <div class="footer"></div>
+
+</div>
+
+<script>
+let index = 0;
+
+function update(){
+    const slides = document.getElementById("slides");
+    const dots = document.querySelectorAll(".dot");
+
+    slides.style.transform = `translateX(-${index * 340}px)`;
+
+    dots.forEach((d,i)=>{
+        d.classList.toggle("active", i === index);
+    });
+}
+
+function next(){
+    if(index < 2){
+        index++;
+        update();
+    }
+}
+
+function skip(){
+    index = 2;
+    update();
+}
+
+function finish(){
+    alert("Onboarding Completed!");
+}
+</script>
+
+</body>
+</html>

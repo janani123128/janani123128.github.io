@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Card Layout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* Card container */
+.wrapper{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* Card */
+.card{
+    width:320px;
+    height:180px;
+    border-radius:12px;
+    color:#fff;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    position:relative;
+    overflow:hidden;
+}
+
+/* Front card */
+.front{
+    background:linear-gradient(135deg,#2563eb,#9333ea);
+    padding:20px;
+}
+
+.front h2{
+    margin-bottom:5px;
+}
+
+.front p{
+    font-size:13px;
+    opacity:0.9;
+}
+
+/* Logo circle */
+.logo{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#fff;
+    color:#2563eb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+/* Back card */
+.back{
+    background:#111827;
+    padding:20px;
+}
+
+.back h3{
+    margin-bottom:10px;
+}
+
+.info{
+    font-size:13px;
+    line-height:1.6;
+    color:#d1d5db;
+}
+
+/* Stripe design */
+.stripe{
+    position:absolute;
+    width:200px;
+    height:200px;
+    background:rgba(255,255,255,0.05);
+    border-radius:50%;
+    top:-80px;
+    left:-80px;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 12px;
+    background:#2563eb;
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+    font-size:12px;
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- FRONT CARD -->
+    <div class="card front">
+        <div class="logo">B</div>
+        <h2>John Doe</h2>
+        <p>Frontend Developer</p>
+        <p>UI/UX Designer</p>
+        <a href="#" class="btn">Portfolio</a>
+    </div>
+
+    <!-- BACK CARD -->
+    <div class="card back">
+        <div class="stripe"></div>
+        <h3>Contact Info</h3>
+        <div class="info">
+            📞 +91 98765 43210<br>
+            📧 john@example.com<br>
+            🌐 www.johndoe.com<br>
+            📍 Bangalore, India
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ID Card Layout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+/* Card wrapper */
+.card{
+    width:320px;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    background:#fff;
+}
+
+/* Header */
+.header{
+    background:linear-gradient(135deg,#2563eb,#9333ea);
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+.header h2{
+    font-size:18px;
+}
+
+.header p{
+    font-size:12px;
+    opacity:0.9;
+}
+
+/* Body */
+.body{
+    padding:20px;
+    text-align:center;
+}
+
+/* Avatar */
+.avatar{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#e5e7eb;
+    margin:0 auto 10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    font-weight:bold;
+    color:#2563eb;
+    border:3px solid #2563eb;
+}
+
+/* Name */
+.name{
+    font-size:18px;
+    font-weight:bold;
+    color:#111827;
+}
+
+.role{
+    font-size:13px;
+    color:#6b7280;
+    margin-bottom:15px;
+}
+
+/* Info */
+.info{
+    text-align:left;
+    font-size:13px;
+    color:#374151;
+    line-height:1.6;
+    margin-top:10px;
+}
+
+.info span{
+    font-weight:bold;
+    color:#111827;
+}
+
+/* Footer barcode */
+.footer{
+    background:#111827;
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+/* Barcode style */
+.barcode{
+    margin-top:5px;
+    height:20px;
+    background:repeating-linear-gradient(
+        90deg,
+        #fff,
+        #fff 2px,
+        #111827 2px,
+        #111827 4px
+    );
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <!-- Header -->
+    <div class="header">
+        <h2>COMPANY ID CARD</h2>
+        <p>Employee Identification</p>
+    </div>
+
+    <!-- Body -->
+    <div class="body">
+
+        <div class="avatar">J</div>
+
+        <div class="name">John Doe</div>
+        <div class="role">Frontend Developer</div>
+
+        <div class="info">
+            <div><span>ID:</span> EMP1024</div>
+            <div><span>Dept:</span> UI/UX Design</div>
+            <div><span>Blood:</span> O+</div>
+            <div><span>Phone:</span> +91 98765 43210</div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div>SCAN ID</div>
+        <div class="barcode"></div>
+    </div>
+
+</div>
+
+</body>
+</html>

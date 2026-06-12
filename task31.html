@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthcare Website</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+/* Navbar */
+.navbar{
+    background:#fff;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#16a34a;
+}
+
+.navbar a{
+    margin-left:15px;
+    text-decoration:none;
+    color:#333;
+}
+
+/* Hero */
+.hero{
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.hero p{
+    margin-bottom:20px;
+}
+
+.hero button{
+    padding:12px 25px;
+    border:none;
+    background:#fff;
+    color:#16a34a;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* Services */
+.services{
+    padding:40px 20px;
+    text-align:center;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:#16a34a;
+    margin-bottom:10px;
+}
+
+/* Doctors */
+.doctors{
+    padding:40px 20px;
+    text-align:center;
+}
+
+.doctor-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    gap:20px;
+    max-width:900px;
+    margin:auto;
+}
+
+.doc{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.photo{
+    height:120px;
+    background:#ddd;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+
+/* Footer */
+footer{
+    background:#111827;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero h1{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">HealthCare+</div>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Doctors</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+    <h1>Your Health, Our Priority</h1>
+    <p>Quality healthcare services for everyone</p>
+    <button>Book Appointment</button>
+</section>
+
+<!-- Services -->
+<section class="services">
+    <h2>Our Services</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>General Checkup</h3>
+            <p>Complete health examination</p>
+        </div>
+
+        <div class="card">
+            <h3>Emergency Care</h3>
+            <p>24/7 emergency support</p>
+        </div>
+
+        <div class="card">
+            <h3>Diagnostics</h3>
+            <p>Advanced medical tests</p>
+        </div>
+
+        <div class="card">
+            <h3>Pharmacy</h3>
+            <p>Trusted medicines available</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Doctors -->
+<section class="doctors">
+    <h2>Our Doctors</h2>
+
+    <div class="doctor-grid">
+
+        <div class="doc">
+            <div class="photo"></div>
+            <h3>Dr. John</h3>
+            <p>Cardiologist</p>
+        </div>
+
+        <div class="doc">
+            <div class="photo"></div>
+            <h3>Dr. Sarah</h3>
+            <p>Neurologist</p>
+        </div>
+
+        <div class="doc">
+            <div class="photo"></div>
+            <h3>Dr. Alex</h3>
+            <p>Pediatrician</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    © 2026 HealthCare+. All Rights Reserved.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ Section</title>
+
+<style>
+body{
+    font-family:Arial, sans-serif;
+    margin:0;
+    background:#f4f4f4;
+}
+
+.faq{
+    max-width:800px;
+    margin:50px auto;
+    padding:20px;
+}
+
+.faq h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#333;
+}
+
+.item{
+    background:#fff;
+    margin-bottom:10px;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    overflow:hidden;
+}
+
+.question{
+    padding:15px;
+    cursor:pointer;
+    font-weight:bold;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.answer{
+    padding:0 15px;
+    max-height:0;
+    overflow:hidden;
+    transition:0.3s ease;
+    color:#555;
+}
+
+/* Active state */
+.item.active .answer{
+    padding:15px;
+    max-height:200px;
+}
+</style>
+</head>
+<body>
+
+<section class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="item">
+        <div class="question">What services do you offer? <span>+</span></div>
+        <div class="answer">
+            We offer web design, development, SEO, and digital marketing services.
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="question">How long does a project take? <span>+</span></div>
+        <div class="answer">
+            Project timelines depend on requirements, usually 1–4 weeks.
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="question">Do you provide support? <span>+</span></div>
+        <div class="answer">
+            Yes, we provide full support after project delivery.
+        </div>
+    </div>
+
+</section>
+
+<script>
+const items = document.querySelectorAll(".item");
+
+items.forEach(item => {
+    item.querySelector(".question").addEventListener("click", () => {
+        item.classList.toggle("active");
+    });
+});
+</script>
+
+</body>
+</html>

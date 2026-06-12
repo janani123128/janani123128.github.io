@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopHub - E-Commerce</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+}
+
+/* Navbar */
+nav{
+    background:white;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#2563eb;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+}
+
+/* Hero Section */
+.hero{
+    height:80vh;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* Categories */
+.categories{
+    padding:70px 8%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+    color:#2563eb;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.category{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:.3s;
+}
+
+.category:hover{
+    transform:translateY(-8px);
+}
+
+/* Products */
+.products{
+    padding:70px 8%;
+    background:#eef4ff;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-img{
+    height:220px;
+    background:linear-gradient(135deg,#60a5fa,#a78bfa);
+}
+
+.card-content{
+    padding:20px;
+}
+
+.price{
+    color:#2563eb;
+    font-size:22px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.buy-btn{
+    display:inline-block;
+    padding:10px 20px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:20px;
+}
+
+/* Offers */
+.offer{
+    padding:80px 20px;
+    text-align:center;
+    background:linear-gradient(135deg,#ec4899,#7c3aed);
+    color:white;
+}
+
+/* Footer */
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:40px;
+}
+
+nav{
+    flex-direction:column;
+    gap:10px;
+}
+
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">ShopHub</div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div>
+        <h1>Big Summer Sale</h1>
+        <p>Up to 50% Off on Trending Products</p>
+        <a href="#" class="btn">Shop Now</a>
+    </div>
+</section>
+
+<section class="categories">
+
+    <h2 class="title">Shop By Category</h2>
+
+    <div class="category-grid">
+
+        <div class="category">📱 Electronics</div>
+        <div class="category">👕 Fashion</div>
+        <div class="category">⌚ Watches</div>
+        <div class="category">💻 Laptops</div>
+
+    </div>
+
+</section>
+
+<section class="products">
+
+    <h2 class="title">Featured Products</h2>
+
+    <div class="product-grid">
+
+        <div class="card">
+            <div class="product-img"></div>
+            <div class="card-content">
+                <h3>Smart Watch</h3>
+                <div class="price">₹2,999</div>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="product-img"></div>
+            <div class="card-content">
+                <h3>Wireless Earbuds</h3>
+                <div class="price">₹1,499</div>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="product-img"></div>
+            <div class="card-content">
+                <h3>Gaming Mouse</h3>
+                <div class="price">₹899</div>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="offer">
+    <h2>🔥 Flash Sale Ends Tonight</h2>
+    <p>Grab your favorite products before the offer ends!</p>
+</section>
+
+<footer>
+    © 2026 ShopHub | E-Commerce Homepage
+</footer>
+
+</body>
+</html>

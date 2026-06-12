@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flyer Template</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* Flyer container */
+.flyer{
+    width:100%;
+    max-width:700px;
+    background:linear-gradient(135deg,#2563eb,#9333ea);
+    color:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    position:relative;
+}
+
+/* Decorative shapes */
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+}
+
+.circle1{
+    width:180px;
+    height:180px;
+    top:-60px;
+    right:-60px;
+}
+
+.circle2{
+    width:120px;
+    height:120px;
+    bottom:-40px;
+    left:-40px;
+}
+
+/* Content */
+.content{
+    padding:40px;
+    text-align:center;
+    position:relative;
+    z-index:1;
+}
+
+.content h1{
+    font-size:2.2rem;
+    margin-bottom:10px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.content h2{
+    font-size:1.2rem;
+    margin-bottom:15px;
+    opacity:0.9;
+}
+
+.content p{
+    font-size:14px;
+    opacity:0.9;
+    line-height:1.5;
+    margin-bottom:20px;
+}
+
+/* Offer badge */
+.badge{
+    display:inline-block;
+    padding:10px 15px;
+    background:#fff;
+    color:#2563eb;
+    font-weight:bold;
+    border-radius:30px;
+    margin-bottom:20px;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    padding:12px 18px;
+    background:#fff;
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* Footer */
+.footer{
+    background:rgba(0,0,0,0.2);
+    text-align:center;
+    padding:10px;
+    font-size:12px;
+}
+
+/* Responsive */
+@media(max-width:600px){
+    .content h1{
+        font-size:1.6rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="flyer">
+
+    <!-- decorative -->
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+    <!-- content -->
+    <div class="content">
+        <div class="badge">50% OFF</div>
+        <h1>Grand Sale</h1>
+        <h2>Limited Time Offer</h2>
+
+        <p>
+            Grab the best deals on our latest products and services.
+            Don’t miss out on this exclusive discount!
+        </p>
+
+        <a href="#" class="btn">Shop Now</a>
+    </div>
+
+    <div class="footer">
+        Valid until June 2026 • Terms & Conditions Apply
+    </div>
+
+</div>
+
+</body>
+</html>

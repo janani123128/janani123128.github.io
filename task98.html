@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessibility Friendly Layout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#ffffff;
+    color:#111827;
+    line-height:1.6;
+}
+
+header{
+    background:#1e40af;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#1f2937;
+    padding:15px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover,
+nav a:focus{
+    color:#fbbf24;
+    outline:2px solid #fbbf24;
+    padding:4px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:#f3f4f6;
+    padding:20px;
+    margin:20px 0;
+    border-radius:10px;
+}
+
+button{
+    background:#1e40af;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover,
+button:focus{
+    background:#1d4ed8;
+    outline:3px solid #93c5fd;
+}
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+
+@media(max-width:768px){
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Accessible Website</h1>
+    <p>Designed for all users</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+
+    <section class="card">
+        <h2>Welcome</h2>
+        <p>
+            This layout uses high contrast colors,
+            readable text, responsive design, and
+            keyboard-friendly navigation.
+        </p>
+        <button>Learn More</button>
+    </section>
+
+    <section class="card">
+        <h2>Features</h2>
+        <ul>
+            <li>High Contrast Colors</li>
+            <li>Responsive Layout</li>
+            <li>Keyboard Accessible</li>
+            <li>Clear Typography</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    © 2026 Accessibility Friendly Design
+</footer>
+
+</body>
+</html>

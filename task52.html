@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Light Mode UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* Light Theme Base */
+body{
+    background:#f4f7fc;
+    color:#111827;
+}
+
+/* Navbar */
+.navbar{
+    background:#ffffff;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+    color:#2563eb;
+}
+
+.navbar a{
+    margin-left:15px;
+    text-decoration:none;
+    color:#374151;
+    font-size:14px;
+}
+
+.navbar a:hover{
+    color:#2563eb;
+}
+
+/* Hero Section */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:2.5rem;
+    margin-bottom:10px;
+    color:#111827;
+}
+
+.hero p{
+    color:#6b7280;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 20px;
+    background:#2563eb;
+    color:#fff;
+    border-radius:5px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#1e40af;
+}
+
+/* Card Section */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:20px;
+    max-width:1000px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:14px;
+    color:#6b7280;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#ffffff;
+    color:#6b7280;
+    margin-top:40px;
+    box-shadow:0 -2px 10px rgba(0,0,0,0.05);
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero h1{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">LightUI</div>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+    <h1>Clean Light Mode UI</h1>
+    <p>A bright, modern and minimal interface design</p>
+    <a href="#" class="btn">Get Started</a>
+</section>
+
+<!-- Cards -->
+<section class="cards">
+
+    <div class="card">
+        <h3>Fast Performance</h3>
+        <p>Optimized UI for better speed and experience.</p>
+    </div>
+
+    <div class="card">
+        <h3>Clean Design</h3>
+        <p>Minimal and user-friendly interface layout.</p>
+    </div>
+
+    <div class="card">
+        <h3>Responsive</h3>
+        <p>Works perfectly on mobile, tablet, and desktop.</p>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    © 2026 LightUI. All rights reserved.
+</footer>
+
+</body>
+</html>

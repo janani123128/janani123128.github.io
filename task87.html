@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clickable Prototype</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* device frame */
+.device{
+    width:340px;
+    height:620px;
+    background:#fff;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,0.5);
+    position:relative;
+}
+
+/* screens */
+.screen{
+    position:absolute;
+    width:100%;
+    height:100%;
+    padding:20px;
+    transition:0.4s ease;
+    top:0;
+    left:0;
+}
+
+.hidden{
+    transform:translateX(100%);
+    opacity:0;
+}
+
+/* header */
+.header{
+    text-align:center;
+    margin-top:20px;
+}
+
+.header h2{
+    font-size:20px;
+    color:#111827;
+}
+
+.header p{
+    font-size:12px;
+    color:#6b7280;
+}
+
+/* cards */
+.card{
+    background:#f1f5f9;
+    padding:15px;
+    border-radius:12px;
+    margin-top:15px;
+    font-size:13px;
+    color:#374151;
+}
+
+/* buttons */
+.btn{
+    display:block;
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    text-align:center;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    color:#fff;
+}
+
+.primary{ background:#2563eb; }
+.purple{ background:#9333ea; }
+.dark{ background:#111827; }
+
+/* nav bar */
+.nav{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    padding:10px;
+    background:#111827;
+    color:#fff;
+    font-size:12px;
+}
+
+/* screens theme */
+.home{ background:#ffffff; }
+.details{ background:#eef2ff; }
+.profile{ background:#ecfeff; }
+settings{ background:#fef3c7; }
+</style>
+</head>
+<body>
+
+<div class="device">
+
+    <!-- HOME -->
+    <div class="screen home" id="home">
+        <div class="header">
+            <h2>Home</h2>
+            <p>Clickable Prototype</p>
+        </div>
+
+        <div class="card">Welcome to interactive prototype UI.</div>
+
+        <div class="btn primary" onclick="go('details')">Go to Details</div>
+        <div class="btn purple" onclick="go('profile')">Go to Profile</div>
+        <div class="btn dark" onclick="go('settings')">Go to Settings</div>
+    </div>
+
+    <!-- DETAILS -->
+    <div class="screen details hidden" id="details">
+        <div class="header">
+            <h2>Details Page</h2>
+            <p>Product Information</p>
+        </div>
+
+        <div class="card">This is a clickable prototype screen.</div>
+
+        <div class="btn primary" onclick="go('home')">Back Home</div>
+    </div>
+
+    <!-- PROFILE -->
+    <div class="screen profile hidden" id="profile">
+        <div class="header">
+            <h2>Profile</h2>
+            <p>User Screen</p>
+        </div>
+
+        <div class="card">User details and info appear here.</div>
+
+        <div class="btn purple" onclick="go('home')">Back Home</div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div class="screen settings hidden" id="settings">
+        <div class="header">
+            <h2>Settings</h2>
+            <p>App Configuration</p>
+        </div>
+
+        <div class="card">Settings panel prototype screen.</div>
+
+        <div class="btn dark" onclick="go('home')">Back Home</div>
+    </div>
+
+    <!-- NAV -->
+    <div class="nav">
+        <div onclick="go('home')">Home</div>
+        <div onclick="go('details')">Details</div>
+        <div onclick="go('profile')">Profile</div>
+        <div onclick="go('settings')">Settings</div>
+    </div>
+
+</div>
+
+<script>
+function go(screen){
+    const allScreens = document.querySelectorAll(".screen");
+    allScreens.forEach(s => s.classList.add("hidden"));
+
+    document.getElementById(screen).classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
