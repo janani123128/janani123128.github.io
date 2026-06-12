@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Navigation Bar</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:#ffffff;
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#2563eb;
+    cursor:pointer;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:0.3s;
+    position:relative;
+}
+
+.nav-links a:hover{
+    color:#2563eb;
+}
+
+/* Underline Animation */
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:#2563eb;
+    transition:0.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* CTA Button */
+.nav-btn{
+    background:#2563eb;
+    color:#fff;
+    padding:10px 20px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.nav-btn:hover{
+    background:#1d4ed8;
+}
+
+/* Mobile Menu */
+.menu-toggle{
+    display:none;
+    flex-direction:column;
+    cursor:pointer;
+}
+
+.menu-toggle span{
+    width:25px;
+    height:3px;
+    background:#333;
+    margin:3px 0;
+    transition:0.3s;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:flex;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#fff;
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+        padding:20px 0;
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        display:none;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-btn{
+        display:none;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">JANANITECH</div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <a href="#" class="nav-btn">Get Started</a>
+
+    <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</nav>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
